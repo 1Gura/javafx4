@@ -14,7 +14,7 @@ public class RegWork {
     private String input;
 
     RegWork(String textFieldString) {
-        this.patternLink = Pattern.compile("<a.*?href ?= ?['\\\"]([^'\\\"]*)['\\\"].*?>(.*?)<\\/a>", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+        this.patternLink = Pattern.compile("<a\\s*href\\s*=\\s*['\\\"]([^'\\\"]*)['\\\"].*?>(.*?)<\\/a>", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
         this.pattern = Pattern.compile("(https?:\\/\\/)?([\\w-]{1,}\\.[\\w-]{1,})[^\\s]*$", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
         this.input = textFieldString;
     }

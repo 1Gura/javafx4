@@ -30,6 +30,20 @@ public class Controller {
 
     @FXML
     void initialize() {
+        textField1.setText("<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
+                "    <title>Document</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "    <a href='http://ya.ru'>Яндекс</a>\n" +
+                "    <a href='http://ya.ru/maps'>Яндекс карты</a>\n" +
+                "    <a href='http://www.google.ru/search?hl=ru&client=firefox&hs=mpE&rls=en'>Поиск</a>\n" +
+                "    <p>Много много текста а подробнее можно посмотреть тут http://podrobnee.ru</p>\n" +
+                "</body>\n" +
+                "</html>");
         button.setOnAction(actionEvent -> {
             RegWork regWork = new RegWork(textField1.getText());
             textField2.setText(regWork.outRegString());
